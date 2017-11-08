@@ -10,7 +10,7 @@ function putFilm(id, films){
 	var id = id;
 	var films= films;
 	
-	doc.naam=id;
+	doc.id=id;
 	doc.films=films;
 	doc.type='acteur';
 	var json = JSON.stringify(doc);

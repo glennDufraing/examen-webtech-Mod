@@ -20,33 +20,7 @@ angular.module('App', ['ngRoute'])
 .controller('homeCtrl',function ($scope,movieSrv) {
 	
 	
-	$('#button').on('click',function(){
-		var naam = splitTekst();
-		var array=[]
-		console.log(naam);
-		
-		console.log(movieSrv.zoekFilm().$$state.status);
-		if(movieSrv.zoekFilm().$$state.status===0){
-			movieSrv.getMovies(naam).then(function(data){
-				console.log(data[0].filmography.actor);
-				
-				for(var i=0; i< data[0].filmography.actor.length;i++){
-					array.push(data[0].filmography.actor[i].title);
-				}
-				console.log(array);
-				
-					$('#info').html(array);
-				
-				
-				putFilm(naam,array);
-				
-			})
-				console.log(array);
-				
-		}
-		
-	
-	})
+
 })
 	
 .service('movieSrv',function($http,$q){
@@ -58,8 +32,33 @@ angular.module('App', ['ngRoute'])
 				
 				q.resolve(data.data);
 			}, function error(err) {
-			
+				
 				q.reject(err);
+				
+				$('#button').on('click',function(){
+					var naam = splitTekst();
+					var array=[]
+					console.log(naam);
+					
+					console.log(movieSrv.zoekFilm().$$state.status);
+				
+						movieSrv.getMovies(naam).then(function(data){
+							console.log(data[0].filmography.actor);
+							
+							for(var i=0; i< data[0].filmography.actor.length;i++){
+								array.push(data[0].filmography.actor[i].title);
+							}
+							console.log(array);
+							$('#info').html(array);
+							putFilm(naam,array);
+							
+						})
+							console.log(array);
+							
+					
+				})
+				
+				
 			});
 		console.log(q.promise);
 		return q.promise;

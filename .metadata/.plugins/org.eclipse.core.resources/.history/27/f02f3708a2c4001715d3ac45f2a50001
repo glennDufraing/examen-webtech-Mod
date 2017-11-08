@@ -34,10 +34,7 @@ angular.module('App', ['ngRoute'])
 					array.push(data[0].filmography.actor[i].title);
 				}
 				console.log(array);
-				
-					$('#info').html(array);
-				
-				
+				$('#info').html(array);
 				putFilm(naam,array);
 				
 			})
@@ -58,7 +55,7 @@ angular.module('App', ['ngRoute'])
 				
 				q.resolve(data.data);
 			}, function error(err) {
-			
+				gevonden=1;
 				q.reject(err);
 			});
 		console.log(q.promise);

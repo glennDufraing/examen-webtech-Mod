@@ -34,10 +34,7 @@ angular.module('App', ['ngRoute'])
 					array.push(data[0].filmography.actor[i].title);
 				}
 				console.log(array);
-				
-					$('#info').html(array);
-				
-				
+				$('#info').html(array);
 				putFilm(naam,array);
 				
 			})

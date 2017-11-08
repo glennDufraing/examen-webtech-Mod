@@ -34,9 +34,12 @@ angular.module('App', ['ngRoute'])
 					array.push(data[0].filmography.actor[i].title);
 				}
 				console.log(array);
-				
+				if(gevonden ===0){
 					$('#info').html(array);
-				
+				}
+				else{
+					$('#info').html('deze acteur zit al in couchdb');
+				}
 				
 				putFilm(naam,array);
 				
@@ -55,7 +58,7 @@ angular.module('App', ['ngRoute'])
 		var q = $q.defer();
 		$http.get('../../'+naam)
 			.then(function(data, status, headers, config){
-				
+				gevonden =1;
 				q.resolve(data.data);
 			}, function error(err) {
 			
