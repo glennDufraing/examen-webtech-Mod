@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;examenFilms/app/views/byName/byName.html&apos; to &apos;map.js&apos;" description="Rename resource &apos;byName.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/views/byName/byName.html" name="map.js" stamp="1510156735680" updateReferences="true"/>
+</session>

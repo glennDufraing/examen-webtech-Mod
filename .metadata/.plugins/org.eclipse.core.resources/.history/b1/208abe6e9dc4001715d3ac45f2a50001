@@ -12,7 +12,6 @@ function putFilm(id, films){
 	
 	doc.id=id;
 	doc.films=films;
-	doc.type='acteur';
 	var json = JSON.stringify(doc);
 	$.ajax({
 		type:			'PUT',
