@@ -1,0 +1,7 @@
+function splitTekst(tekst){
+	var naam = $('#naam').val();
+	
+	var gesplitst = naam.split(' ');
+	var totaalnaam= gesplitst[0]+'+'+gesplitst[1];
+	return totaalnaam;
+}

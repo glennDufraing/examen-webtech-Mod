@@ -1,0 +1,26 @@
+function splitTekst(){
+	var naam = $('#naam').val();
+	
+	var gesplitst = naam.split(' ');
+	var totaalnaam= gesplitst[0]+'+'+gesplitst[1];
+	return totaalnaam;
+}
+function putFilm(id, films){
+	var doc ={};
+	var id = id;
+	var films= films;
+	$.ajax({
+		type:			'PUT',
+		url:				'../../' + voornaam + '_' + achternaam,
+		data:			json,
+		contentType: 	'application/json',
+		async:			true,
+		success:		function(data){
+			console.log("put gelukt");
+			getOutput(ALL_DOCS,'')
+		},
+		error:		function(XMLHttpRequest, textStatus, errorThrown){
+			console.log(errorThrown); 
+		}
+	});
+}

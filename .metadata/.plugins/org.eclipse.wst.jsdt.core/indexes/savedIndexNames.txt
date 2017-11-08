@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\glenn\Desktop\examen webtech Mod\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1844805624.index
+1545084661.index
+770376249.index
+4001509451.index
+162681897.index

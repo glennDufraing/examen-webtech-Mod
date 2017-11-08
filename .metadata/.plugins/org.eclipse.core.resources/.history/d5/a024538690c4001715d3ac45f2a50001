@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <h1 class="display-3">Hello, world!</h1>
+  <div class="form-group">
+  <label for="voornaam">Zoek acteur: </label>
+  <input type="text" class="form-control" id="voornaam">
+</div>
+ <div class="form-group">
+  <label for="achternaam">Zoek acteur: </label>
+  <input type="text" class="form-control" id="achternaam">
+</div>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#/movies" role="button">Learn more</a>
+  </p>
+</div>
