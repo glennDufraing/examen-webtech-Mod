@@ -35,11 +35,10 @@ angular.module('App', ['ngRoute'])
 				}
 				console.log(array);
 				$('#info').html(array);
-				putFilm(naam,array);
 				
 			})
 				console.log(array);
-				
+				putFilm(naam,array);
 		}
 		
 	
